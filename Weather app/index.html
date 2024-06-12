@@ -36,6 +36,20 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const apiKey = "3a4c32579ad37ae118d9cd889ea7ae40";
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=Nairobi"
+
+        async function checkWeather(){
+            const response = await fetch(apiUrl + '&appid=${apiKey}');
+            var data = await response.json();
+
+            console.log(data);
+            
+        }
+        checkWeather();
+    </script>
     
 </body>
 </html>
